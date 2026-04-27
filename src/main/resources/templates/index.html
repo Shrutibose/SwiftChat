@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messenger</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Messenger</h1>
+        <p class="subtitle">Send a message to any user with your auth token</p>
+    </header>
+
+    <!-- AUTH PANEL -->
+    <section id="auth-panel" class="card">
+        <h2>Sign in</h2>
+        <p class="hint">Authenticates against <code>http://localhost:8081/auth</code></p>
+        <form id="auth-form">
+            <label>
+                Username
+                <input type="text" id="username" name="username" required autocomplete="username" />
+            </label>
+            <label>
+                Password
+                <input type="password" id="password" name="password" required autocomplete="current-password" />
+            </label>
+            <button type="submit" id="auth-submit">Sign in</button>
+        </form>
+        <p id="auth-status" class="status" role="status"></p>
+    </section>
+
+    <!-- SEND PANEL -->
+    <section id="send-panel" class="card hidden">
+        <div class="row-between">
+            <div>
+                <h2>Send a message</h2>
+                <p class="hint">Posts to <code>http://localhost:8081/send</code></p>
+            </div>
+            <button type="button" id="logout-btn" class="ghost">Sign out</button>
+        </div>
+
+        <div class="token-box">
+            <span class="label">JWT</span>
+            <code id="token-preview"></code>
+        </div>
+
+        <form id="send-form">
+            <label>
+                Recipient user ID
+                <input type="text" id="to-user-id" name="toUserId" placeholder="e.g. 42 or user_abc" required />
+            </label>
+            <label>
+                Message
+                <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+            </label>
+            <button type="submit" id="send-submit">Send message</button>
+        </form>
+        <p id="send-status" class="status" role="status"></p>
+    </section>
+
+    <footer>
+        <small>Server: <code>http://localhost:8081</code></small>
+    </footer>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
