@@ -1,6 +1,6 @@
 # SwiftChat 💬
 
-A production-grade real-time chat application built with **Spring Boot**, **WebSocket**, **STOMP**, **Redis**, and **JWT Authentication**. SwiftChat supports one-to-one messaging, group chats, user blocking, and online presence tracking — designed with a focus on performance, scalability, and clean backend architecture.
+A production-grade real-time chat application built with **Spring Boot**, **WebSocket**, **STOMP**, **Redis**, and **JWT Authentication**. SwiftChat supports one-to-one messaging, group chats, user blocking, and online presence tracking - designed with a focus on performance, scalability, and clean backend architecture.
 
 ---
 
